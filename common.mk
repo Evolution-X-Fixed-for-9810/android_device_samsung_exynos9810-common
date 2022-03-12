@@ -295,5 +295,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+#Priv-app perms
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-gapps.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gapps.xml \
+    $(LOCAL_PATH)/permissions/privapp-permissions-obdm.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-obdm.xml
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
